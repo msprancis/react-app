@@ -1,6 +1,5 @@
-# react-app
 Experiments with React create react app and material-ui
-
+#
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
