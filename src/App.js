@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Button from 'material-ui/Button';
+import Icon from 'material-ui/Icon';
 
 function Square(props) {
   return (
@@ -104,12 +105,11 @@ class App extends Component {
     if (winner) {
       status = "Winner: " + winner;
     } else {
-      status = "Next player: " + (this.state.xIsNext ? "X" : "O");
+      status = (<div>Next player: <Icon color="primary">{this.state.xIsNext ? "control_point" : "panorama_fish_eye"}</Icon></div>);
     }
 
     return (
       <div className="game">
-     
         <div className="game-board">
           <Board
             squares={current.squares}
