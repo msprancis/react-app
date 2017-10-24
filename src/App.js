@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import Button from 'material-ui/Button';
 
 function Square(props) {
   return (
@@ -94,7 +95,7 @@ class App extends Component {
         'Go to game start';
       return (
         <li key={move}>
-          <button onClick={() => this.jumpTo(move)}>{desc}</button>
+          <Button raised dense color="primary" onClick={() => this.jumpTo(move)}>{desc}</Button>
         </li>
       );
     });
@@ -108,10 +109,7 @@ class App extends Component {
 
     return (
       <div className="game">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>        
+     
         <div className="game-board">
           <Board
             squares={current.squares}
@@ -149,21 +147,4 @@ function calculateWinner(squares) {
   return null;
 }
 
-/*
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
-*/
 export default App;
